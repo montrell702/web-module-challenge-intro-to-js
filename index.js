@@ -19,10 +19,21 @@ Do the following:
 
    HINT: no function required
 */
+const votingAge = 18;
 
 
 
-/*
+
+ if (votingAge > 18);
+console.log(true);
+else {
+  console.log(false)
+}
+
+
+
+
+/* 
 Task 1b - Values (not auto tested)
 
 Do the following:   
@@ -34,8 +45,17 @@ Do the following:
    HINT: no function required
 */
 
+let  dog = "ada"
+
+let  behavior = "bad"
+
+if (behavior === "bad") {
+  dog ="Noa"
+
+} 
 
 
+console.log('task 1 b:, dog');
 
 
 /*
@@ -48,6 +68,12 @@ Do the following:
 
    HINT: look up the Number method
 */
+const party ="1999";
+
+console.log ("task 1 c:", Number(party));
+
+
+
 
 
 
@@ -61,9 +87,13 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(num1, num2){
-  return num1 * num2;
+function multiply(a, b) {
+  return a * b;
 }
+console.log("tesk 1 d", multiply(9, 9));
+
+
+
 
 
 
@@ -77,59 +107,99 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+
+return age * 7;
 }
 
+console.log("task 2", dogyears(42));
 
 
-/*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
-//Dog feeder - Depending on their weight and age, we need to know how many pounds of food to feed our dog each day!
-/*
-Use the hungryDog function and feeding requirements below to do the following:
-1. Invoke the hungryDog function below and pass it a weight value in pounds, followed by an age value in years
-2. 🌟 NOTE: if the dog is a puppy, the age will be a decimal (rounded to two places). For example: 3 months = .25 (3 divided by 12)
-3. Do the proper calculations and return the number of pounds of raw food to feed the dog/puppy in a day
 
-REMEMBER: This program should handle correctly adult AND puppy ages and weights
-HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 
-Feeding Requirements:
 
-Adult Dogs 1 year and older 
-   up to 5 lbs - 5% of their body weight
-   6 - 10 lbs - 4% of their body weight 
-   11 - 15 lbs - 3% of their body weight 
-   > 15lbs - 2% of their body weight 
+  /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
-Puppies less than 1 year
-   2 - 4 months 10% of their body weight
-   4 - 7 months 5% of their body weight 
-   7 - 12 months 4% of their body weight
+  //Dog feeder - Depending on their weight and age, we need to know how many pounds of food to feed our dog each day!
+  /*
+  Use the hungryDog function and feeding requirements below to do the following:
+  1. Invoke the hungryDog function below and pass it a weight value in pounds, followed by an age value in years
+  2. 🌟 NOTE: if the dog is a puppy, the age will be a decimal (rounded to two places). For example: 3 months = .25 (3 divided by 12)
+  3. Do the proper calculations and return the number of pounds of raw food to feed the dog/puppy in a day
   
-NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
-NOTE 2: This is a great time to check the tests to see what it expects, versus what is actually 
-        returned from your function. This is an example of the output to look for on each test point. 
-          ● hungryDogFunction › Dog is 1 year and is 5lbs or less
+  REMEMBER: This program should handle correctly adult AND puppy ages and weights
+  HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
+  
+  Feeding Requirements:
+  
+  Adult Dogs 1 year and older 
+     up to 5 lbs - 5% of their body weight
+     6 - 10 lbs - 4% of their body weight 
+     11 - 15 lbs - 3% of their body weight 
+     > 15lbs - 2% of their body weight 
+  
+  Puppies less than 1 year
+     2 - 4 months 10% of their body weight
+     4 - 7 months 5% of their body weight 
+     7 - 12 months 4% of their body weight
+    
+  NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
+  NOTE 2: This is a great time to check the tests to see what it expects, versus what is actually 
+          returned from your function. This is an example of the output to look for on each test point. 
+            ● hungryDogFunction › Dog is 1 year and is 5lbs or less
+  
+              expect(received).toBe(expected) // Object.is equality
+  
+              Expected: 0.2
+              Received: undefined
+  
+                21 | describe('hungryDogFunction', ()=>{ 
+                22 |   it('Dog is 1 year and is 5lbs or less', ()=>{
+              > 23 |     expect(functions.hungryDog(4, 1)).toBe(0.2);
+                  |
+            ^
+                24 |   })
+        
+          Notice the expected and received, expected is what the test is looking for, and received is what was actually returned from this function. You can also see it's passing in two values, the number 4 and the number 1. 
+          So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
+  */
 
-            expect(received).toBe(expected) // Object.is equality
+  function hungryDog(weight , age) {
+if (age >== 1 && weight <= 5){
+   return weight * 0.05;
 
-            Expected: 0.2
-            Received: undefined
+}else if (age >=1 && >= && weight < = 10){
+    return  weight * 0.04;
+  else if (age > =1 && weight =11 && weight < 15){
+    return weight * 0.03;
+  else if (age >= 1 && weight > 15){
+    return weight * 002;
+else if (age > 1 && <= 0.583){
+    return weight * 0.04;
+else if (age 0.0583 && age >= 0.333){
+    return weight * 0.05;
+  else if (age < 0.3333){
+    return weight *0.010;
+  }else{
+    return "try again
+    
+    "
 
-              21 | describe('hungryDogFunction', ()=>{ 
-              22 |   it('Dog is 1 year and is 5lbs or less', ()=>{
-            > 23 |     expect(functions.hungryDog(4, 1)).toBe(0.2);
-                |
-          ^
-              24 |   })
-      
-        Notice the expected and received, expected is what the test is looking for, and received is what was actually returned from this function. You can also see it's passing in two values, the number 4 and the number 1. 
-        So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
-*/  
+  
 
-function hungryDog(/*add your code here*/){
+  }
+}
+  
+
+
+
+
+  }
+
+
+
+
   /*add your code here*/
 }
 
@@ -156,117 +226,170 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 
-function game(user, computer){
-  /*add your code here*/
+let computer = Math.random();
+  
+  if (computer <=0.34){
+    computer = "rock";
+  }else if (computer <= 0.67){
+     computer = "paper";
+  }else if (computer > 0.67){
+    computer = "scissors"
+  }
+
+
+
+
+function game(user, computer) {
+  if (user === computer){
+    return "it's a tie";
+  }else if (user === "rock" && computer === "scissors"){
+    return"you win!"
+  }else if (user === "paper"&& computer === "rock"){
+     return "you win!"
+    }else if (user === "scissors ", && computer === "paper"){
+       return "you win!";
+    }else{ 
+      return "you lose!"
+    }
+  }
+  }
 }
 
 
 
-/*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
+  //Metric Converter 
+  //Task 5a - Kilometers to Miles 
+  /*
+  Using the miles function below do the following:
+  1. Receive a number of kilometers
+  2. Convert the number of kiolmeters received to miles
+  3. Return the number of miles
+  */
 
-//Metric Converter 
-//Task 5a - Kilometers to Miles 
-/*
-Using the miles function below do the following:
-1. Receive a number of kilometers
-2. Convert the number of kiolmeters received to miles
-3. Return the number of miles
-*/
+  function miles(kilometers) {
+    return kilometers * 0.621371
+  }
 
-function miles(/*add your code here*/){
-  /*add your code here*/
-}
-
-
-
-//Task 5b - Centimeters to Feet
-/*
-Using the feet function below do the following:
-1. Receive a number of cm
-2. Convert the number of cm to feet
-3. Return number of feet
-*/
-
-function feet(/*add your code here*/){
-  /*add your code here*/
-}
+console.log(task 5 a , miles (2 ));
 
 
 
-/*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
-
-// Let's Sing 99 Bottles of Soda on the Wall!
-/*
-Using the annoyingSong function below do the following:
-1. Receive a starting number
-2. The annoying song function should return the following string exactly one time:
-
-    "{number you gave as an argument} bottles of soda on the wall, {number you gave as an argument} bottles of soda, take one down pass it around {number you gave as an argument minus 1} bottles of soda on the wall"
-
-3. Outside of the function, Make a loop that invokes annoying song with a number that decreases until it gets to 1 bottle left. 
-4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
-*/
-
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
-}
-
-
-/*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
-
-//Grade Calculator
-/*
-Using the grade function below do the following: 
-1. Receive a score out of 100 
-2. Return the corresponding letter grade following this grade scale:
-
- 90-100 should return 'you got an A' 
- 80-89 should return 'you got a B'
- 70-79 should return 'you got a C'
- 60-69 should return 'you got a D'
- below should return 'you got an F'
-*/
-
-function grade(/*Your Code here */){
-/*Your Code here */
-}
 
 
 
-/*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
-
-//Vowel Counter - How many vowels are there?
-/*
-Using the vowelCounter function below do the following:
-1. Receive a string as a parameter
-2. Count and return the number of vowels within that string.  It should handle both capitalized and uncapitalized vowels.
-
-HINT - you may need to study tomorrow's content on arrays 
-HINT - try looking up the .includes() method
-*/
 
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
-}
+  //Task 5b - Centimeters to Feet
+  /*
+  Using the feet function below do the following:
+  1. Receive a number of cm
+  2. Convert the number of cm to feet
+  3. Return number of feet
+  */
+
+  function feet(Centimeters) {
+    return Centimeters / 30.48;
+
+    console.log task 5 b, feet (160)
+
+  }
 
 
 
-/*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-function foo(){
-  console.log('its working');
-  return 'bar';
-}
-foo();
-/*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-module.exports = {
-  foo,
-  multiply,
-  dogYears,
-  hungryDog,
-  game,
-  miles,
-  feet,
-  annoyingSong,
-  grade
-}
+  /*🚀🚀🚀🚀0000🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
+
+  // Let's Sing 99 Bottles of Soda on the Wall!
+  /*
+  Using the annoyingSong function below do the following:
+  1. Receive a starting number
+  2. The annoying song function should return the following string exactly one time:
+  
+      "{number you gave as an argument} bottles of soda on the wall, {number you gave as an argument} bottles of soda, take one down pass it around {number you gave as an argument minus 1} bottles of soda on the wall"
+  
+  3. Outside of the function, Make a loop that invokes annoying song with a number that decreases until it gets to 1 bottle left. 
+  4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
+  */
+
+  function annoyingSong(number) {
+    for (let i = number; i > 0 , i --){
+      return ${i} "bottles of soda on the wall ${i} bottles of soda, take one down pass it around ${i -1} bottles of soda on the wall";
+    }
+
+    console.log(task 6 annoyingSong(8));
+
+  }
+
+  function annoyingSong()
+
+  /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
+
+  //Grade Calculator
+  /*
+  Using the grade function below do the following: 
+  1. Receive a score out of 100 
+  2. Return the corresponding letter grade following this grade scale:
+  
+   90-100 should return 'you got an A' 
+   80-89 should return 'you got a B'
+   70-79 should return 'you got a C'
+   60-69 should return 'you got a D'
+   below should return 'you got an F'
+  */
+
+  function grade(number) {
+    if (number >= 90){
+      return "you got an A!";
+    }else if (number < 90 && number >= 80){
+       return "you got a B!"
+       }   else if( number < 80 && number ,= 70)
+     return "you got a C!";
+    }else if (number <70 && number <= 60){
+       return "you got a D!";
+    }else if (number <60){
+      return "you got an F!";
+
+console.log(task 7 grade(b))
+
+
+    
+  }
+
+
+
+  /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
+
+  //Vowel Counter - How many vowels are there?
+  /*
+  Using the vowelCounter function below do the following:
+  1. Receive a string as a parameter
+  2. Count and return the number of vowels within that string.  It should handle both capitalized and uncapitalized vowels.
+  
+  HINT - you may need to study tomorrow's content on arrays 
+  HINT - try looking up the .includes() method
+  */
+
+
+  function vowelCounter(/*add your code here*/) {
+    /*add your code here*/
+  }
+
+
+
+  /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
+  function foo() {
+    console.log('its working');
+    return 'bar';
+  }
+  foo();
+  /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
+  module.exports = {
+    foo,
+    multiply,
+    dogYears,
+    hungryDog,
+    game,
+    miles,
+    feet,
+    annoyingSong,
+    grade
+  }
